@@ -4,9 +4,10 @@ export const Contexto = createContext();
 
 export const ProviderValores = ({children}) =>{
     const [quantPizza, setQuantPizza] = useState("")
+    const [pizzaSeg, setPizzaSeg] = useState("")
 
     return(
-    <Contexto.Provider value={{rota, setRota, teste, setTeste, usuario, setUsuario, idUsuario, setIdUsuario}}>
+    <Contexto.Provider value={{quantPizza, setQuantPizza, pizzaSeg, setPizzaSeg}}>
         {children}
     </Contexto.Provider>
 )}
