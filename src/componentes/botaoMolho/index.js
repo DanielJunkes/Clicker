@@ -9,20 +9,12 @@ const BotaoMolho = () => {
     const {setPizzaSeg} = useContext(Contexto)
 
     const handleSetPizzaSeg = (valor) => {
-        setPizzaSeg(valor)
-    }
-
-    const handleSetPizzaSeg2 = (valor) => {
         setPizzaSeg(pizzaSeg+valor)
     }
 
-    useEffect(()=>{
-        handleSetPizzaSeg(0)
-    }, [])
-
     return(
         <>
-            <button id="botaoMolho" onClick={() => handleSetPizzaSeg2(1)}>Comprar Molho</button>
+            <button id="botaoMolho" onClick={() => handleSetPizzaSeg(1)}>Comprar Molho</button>
         </>
     )
 }

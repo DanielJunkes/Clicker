@@ -9,17 +9,23 @@ const Contador = () => {
     const {quantPizza} = useContext(Contexto)
     const {setQuantPizza} = useContext(Contexto)
 
-    const handleSetQuantPizza = (valor) =>{
-        setQuantPizza(valor)
+    const {pizzaSeg} = useContext(Contexto)
+
+    const handleSetQuantPizza = () =>{
+        setQuantPizza(quantPizza+pizzaSeg)
     }
 
     useEffect(()=>{
-        handleSetQuantPizza(0)
-    }, [])
+        const intervalId = setInterval(() => {
+            handleSetQuantPizza()
+        }, 1000)
+        return () => clearInterval(intervalId)
+    }, [quantPizza, pizzaSeg])
 
     return(
         <>
             <h1 id="contador">Pizzas: {quantPizza}</h1>
+            <p id="contadorSeg">Pizzas por Segundo: {pizzaSeg}</p>
         </>
     );
 }
