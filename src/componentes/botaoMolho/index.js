@@ -11,10 +11,10 @@ const BotaoMolho = () => {
     const handleSetPizzaSeg = (valor) => {
         setPizzaSeg(pizzaSeg+valor)
     }
-
+    
     return(
         <>
-            <button id="botaoMolho" onClick={() => handleSetPizzaSeg(1)}>Comprar Molho</button>
+            <button id="botaoMolho" onClick={() => handleSetPizzaSeg(0.1)}>Comprar Molho</button>
         </>
     )
 }

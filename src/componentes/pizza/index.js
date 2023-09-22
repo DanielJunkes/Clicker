@@ -9,8 +9,8 @@ const Pizza = () => {
     const {quantPizza} = useContext(Contexto)
     const {setQuantPizza} = useContext(Contexto)
 
-    const handleSetQuantPizza = (valor) =>{
-        setQuantPizza(quantPizza + valor)
+    function handleSetQuantPizza(valor) {
+        setQuantPizza(quantPizza + valor);
     }
 
     return(
