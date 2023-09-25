@@ -9,15 +9,17 @@ const Pizza = () => {
     const {quantPizza} = useContext(Contexto)
     const {setQuantPizza} = useContext(Contexto)
 
+    const {multClick} = useContext(Contexto)
+
+    const valorClick = 1 * multClick;
+
     function handleSetQuantPizza(valor) {
         setQuantPizza(quantPizza + valor);
     }
 
     return(
         <>
-            <div id="container">
-                <img src={pizza} id="pizza" onClick={() => handleSetQuantPizza(1)}/>
-            </div>
+            <img src={pizza} id="pizza" onClick={() => handleSetQuantPizza(valorClick)}/>
         </>
     );
 }
